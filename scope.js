@@ -42,8 +42,8 @@
 //
 // const secondVerdict = `The murderer is ${murderer}.`;
 // console.log('Second Verdict: ', secondVerdict);
-// First Verdict:  The murderer is Mrs. Peacock.
-// Second Verdict:  The murderer is Professor Plum.
+// 1st Verdict:  The murderer is Mrs. Peacock.
+// 2nd Verdict:  The murderer is Professor Plum.
 
 
 // episode 4
@@ -59,8 +59,8 @@
 // const suspects = declareAllSuspects();
 // console.log(suspects);
 // console.log(`Suspect three is ${suspectThree}.`);
-// The suspects are Miss Scarlet, Professor Plum, Colonel Mustard.
-// Suspect three is Mrs. Peacock.
+// The suspects: Miss Scarlet, Professor Plum, Colonel Mustard.
+// Suspect 3 is Mrs. Peacock.
 
 
 // episode 5
@@ -82,6 +82,7 @@
 // const verdict = declareWeapon();
 // console.log(verdict);
 // The weapon is the Revolver.
+
 
 // episode 6
 // let murderer = 'Colonel Mustard';
@@ -133,39 +134,56 @@
 // const verdict = declareMurderer();
 // console.log(verdict);
 // The murderer is Mr. Green.
+
+
 // episode 8
-const scenario = {
-  murderer: 'Mrs. Peacock',
-  room: 'Conservatory',
-  weapon: 'Lead Pipe'
-};
-
-const changeScenario = function() {
-  scenario.murderer = 'Mrs. Peacock';
-  scenario.room = 'Dining Room';
-
-  const plotTwist = function(room) {
-    if (scenario.room === room) {
-      scenario.murderer = 'Colonel Mustard';
-    }
-
-    const unexpectedOutcome = function(murderer) {
-      if (scenario.murderer === murderer) {
-        scenario.weapon = 'Candle Stick';
-      }
-    }
-
-    unexpectedOutcome('Colonel Mustard');
-  }
-
-  plotTwist('Dining Room');
-}
-
-const declareWeapon = function() {
-  return `The weapon is ${scenario.weapon}.`
-}
-
-changeScenario();
-const verdict = declareWeapon();
-console.log(verdict);
+// const scenario = {
+//   murderer: 'Mrs. Peacock',
+//   room: 'Conservatory',
+//   weapon: 'Lead Pipe'
+// };
+//
+// const changeScenario = function() {
+//   scenario.murderer = 'Mrs. Peacock';
+//   scenario.room = 'Dining Room';
+//
+//   const plotTwist = function(room) {
+//     if (scenario.room === room) {
+//       scenario.murderer = 'Colonel Mustard';
+//     }
+//
+//     const unexpectedOutcome = function(murderer) {
+//       if (scenario.murderer === murderer) {
+//         scenario.weapon = 'Candle Stick';
+//       }
+//     }
+//
+//     unexpectedOutcome('Colonel Mustard');
+//   }
+//
+//   plotTwist('Dining Room');
+// }
+//
+// const declareWeapon = function() {
+//   return `The weapon is ${scenario.weapon}.`
+// }
+//
+// changeScenario();
+// const verdict = declareWeapon();
+// console.log(verdict);
 // The weapon is Candle Stick.
+
+// episode 9
+let murderer = 'Professor Plum';
+
+if (murderer === 'Professor Plum') {
+  let murderer = 'Mrs. Peacock';
+}
+
+const declareMurderer = function() {
+  return `The murderer is ${murderer}.`;
+}
+
+const verdict = declareMurderer();
+console.log(verdict);
+// The murderer is Professor Plum.
